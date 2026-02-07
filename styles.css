@@ -388,18 +388,30 @@ a {
   border: 1px solid var(--border);
 }
 
-.problem-title {
+.problem-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 8px;
+  gap: 16px;
 }
 
-.problem-title h4 {
+.problem-header h4 {
   font-size: 1.2rem;
 }
 
-.problem-title img {
+.problem-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.problem-icon img {
   width: 30px;
   height: 30px;
 }
