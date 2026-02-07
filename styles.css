@@ -60,6 +60,10 @@ a {
   background: #fff;
 }
 
+.hero .container {
+  padding-right: 6vw;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -122,9 +126,9 @@ a {
   background: #111;
   color: #fff;
   border: none;
-  padding: 12px 18px;
+  padding: 14px 22px;
   border-radius: 10px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 
