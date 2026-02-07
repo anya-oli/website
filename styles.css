@@ -86,7 +86,7 @@ a {
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-size: clamp(2.15rem, 3.8vw, 3.35rem);
   margin: 18px 0 16px;
 }
 
@@ -193,6 +193,10 @@ a {
   margin-bottom: 32px;
 }
 
+.section-heading h2 {
+  font-size: clamp(2.3rem, 3vw, 2.8rem);
+}
+
 .matchmaker {
   padding: 80px 0;
   background: #fbfbfb;
@@ -213,7 +217,7 @@ a {
 
 .info-block h3 {
   font-size: 1.4rem;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
 }
 
 .link {
@@ -240,6 +244,13 @@ a {
   font-size: 2rem;
   color: #d2d2d2;
   font-weight: 600;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
 }
 
 .phone-card {
