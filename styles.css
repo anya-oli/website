@@ -206,7 +206,7 @@ a {
 }
 
 .matchmaker {
-  padding: 80px 0;
+  padding: 105px 0;
   background: #fbfbfb;
 }
 
@@ -219,7 +219,7 @@ a {
 
 .divider {
   width: 1px;
-  background: #e0e0e0;
+  background: #8A8B8F;
   align-self: stretch;
 }
 
@@ -386,7 +386,7 @@ a {
 }
 
 .problems {
-  padding: 80px 0 120px;
+  padding: 105px 0 120px;
   background: #fff;
 }
 
@@ -463,6 +463,7 @@ a {
 
   .divider {
     display: none;
+    
   }
 
   .problem-grid {
