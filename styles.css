@@ -5,7 +5,7 @@
   --text: #131313;
   --muted: #6b6b6b;
   --border: #e6e6e6;
-  --card: #f6f6f6;
+  --card: #F5F5F5;
   --white: #ffffff;
   --shadow: 0 22px 40px rgba(16, 24, 40, 0.12);
 }
@@ -229,8 +229,9 @@ a {
 
 .link {
   color: var(--blue-dark);
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: -4px;
 }
 
 .steps {
@@ -391,13 +392,13 @@ a {
 .problem-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 8px;
-  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 10px;
 }
 
 .problem-header h4 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .problem-icon {
@@ -412,13 +413,14 @@ a {
 }
 
 .problem-icon img {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
 }
 
 .problem-card p {
   font-size: 0.9rem;
-  color: var(--blue);
+  color: #4353A5;
+  line-height: 1.25rem;
 }
 
 .cta {
