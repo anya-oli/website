@@ -227,6 +227,10 @@ a {
   align-items: flex-start;
 }
 
+.matchmaker-left {
+  padding-right: 50px;
+}
+
 .divider {
   width: 1px;
   background: #8A8B8F;
@@ -250,9 +254,9 @@ a {
 }
 
 .steps {
-  margin-top: 24px;
+  margin-top: 65px;
   display: grid;
-  gap: 18px;
+  gap: 48px;
 }
 
 .step {
@@ -268,21 +272,25 @@ a {
   line-height: 3.1rem;
   color: #D1D5E5;
   font-weight: 600;
-  padding-left: 6px;
-  padding-right: 8px;
+ 
 }
 
 .step-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
+  gap: 20px;
   
+}
+
+.step-header h4 {
+  font-size: 1.6rem;
+
 }
 
 .step p {
   color: var(--blue-dark);
-  line-height: 1.3rem;
+  line-height: 1.35rem;
+  margin-top: 14px;
 }
 
 .phone-card {
@@ -296,7 +304,6 @@ a {
   display: grid;
   justify-items: center;
   gap: 16px;
-
 }
 
 .phone-frame {
