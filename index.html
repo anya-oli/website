@@ -246,39 +246,6 @@
         dots.forEach((dot, dotIndex) => {
           dot.addEventListener("click", () => updateCarousel(dotIndex));
         });
-
-        let startX = 0;
-        let isDragging = false;
-
-        const onPointerDown = (event) => {
-          isDragging = true;
-          startX = event.clientX;
-          track.style.transition = "none";
-        };
-
-        const onPointerMove = (event) => {
-          if (!isDragging) return;
-          const deltaX = event.clientX - startX;
-          track.style.transform = `translateX(calc(-${currentIndex * 100}% + ${deltaX}px))`;
-        };
-
-        const onPointerUp = (event) => {
-          if (!isDragging) return;
-          isDragging = false;
-          const deltaX = event.clientX - startX;
-          track.style.transition = "transform 0.35s ease";
-          if (deltaX > 60) {
-            updateCarousel(currentIndex - 1);
-          } else if (deltaX < -60) {
-            updateCarousel(currentIndex + 1);
-          } else {
-            updateCarousel(currentIndex);
-          }
-        };
-
-        track.addEventListener("pointerdown", onPointerDown);
-        window.addEventListener("pointermove", onPointerMove);
-        window.addEventListener("pointerup", onPointerUp);
       }
     </script>
   </body>
