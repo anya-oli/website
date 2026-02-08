@@ -306,13 +306,14 @@ a {
 .phone-device {
   width: 100%;
   display: block;
+  background-color: fff;
 }
 
 .phone-screen {
   position: absolute;
-  top: 9%;
-  left: 10%;
-  right: 10%;
+  top: 11%;
+  left: 12%;
+  right: 12%;
   bottom: 11%;
   border-radius: 20px;
   overflow: hidden;
@@ -349,9 +350,9 @@ a {
   height: 44px;
   border-radius: 50%;
   border: none;
-  background: rgba(255, 255, 255, 0.92);
-  color: #111;
-  font-size: 1.25rem;
+  background: var(--blue-dark);
+  color: #fff;
+  font-size: 1.6rem;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -359,11 +360,11 @@ a {
 }
 
 .carousel-arrow.prev {
-  left: -28px;
+  left: -38px;
 }
 
 .carousel-arrow.next {
-  right: -28px;
+  right: -38px;
 }
 
 .carousel-pagination {
