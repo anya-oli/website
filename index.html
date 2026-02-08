@@ -94,29 +94,43 @@
                 <h3>Compatibility assessed with questions that matter</h3>
                 <p class="link">without AI</p>
               </div>
-              <div class="phone-card">
-                <p class="phone-title">Each question contributes to your unique matchmaking</p>
-                <div class="phone-illustration">
-                  <div class="phone-top">
-                    <span>Conversational Dating</span>
-                    <div class="phone-bar"></div>
-                  </div>
-                  <div class="phone-body">
-                    <p class="prompt">What’s worse: physical cheating or emotional cheating?</p>
-                    <button class="chip">Not sure</button>
-                    <div class="slider">
-                      <span>Physical</span>
-                      <div class="track">
-                        <div class="thumb"></div>
+              <div class="phone-card phone-carousel">
+                <div class="phone-frame">
+                  <img
+                    class="phone-device"
+                    src="./assets/iPhone 14 Pro – Space Black.png"
+                    alt="iPhone 14 Pro in space black"
+                  />
+                  <div class="phone-screen">
+                    <div class="carousel-track">
+                      <div class="carousel-slide is-active">
+                        <img src="./assets/exclusiveSlider.png" alt="Exclusive slider screen" />
                       </div>
-                      <span>Emotional</span>
-                    </div>
-                    <div class="phone-actions">
-                      <button class="ghost">Previous</button>
-                      <button class="primary">Next</button>
+                      <div class="carousel-slide">
+                        <img src="./assets/jealousySlider.png" alt="Jealousy slider screen" />
+                      </div>
                     </div>
                   </div>
-                  
+                  <button class="carousel-arrow prev" type="button" aria-label="Previous slide">
+                    ←
+                  </button>
+                  <button class="carousel-arrow next" type="button" aria-label="Next slide">
+                    →
+                  </button>
+                </div>
+                <div class="carousel-pagination" role="tablist" aria-label="Slider pagination">
+                  <button
+                    class="pagination-dot is-active"
+                    type="button"
+                    aria-label="Show exclusive slider"
+                    aria-pressed="true"
+                  ></button>
+                  <button
+                    class="pagination-dot"
+                    type="button"
+                    aria-label="Show jealousy slider"
+                    aria-pressed="false"
+                  ></button>
                 </div>
               </div>
               
@@ -203,5 +217,36 @@
         </div>
       </div>
     </footer>
+    <script>
+      const phoneCarousel = document.querySelector(".phone-carousel");
+      if (phoneCarousel) {
+        const track = phoneCarousel.querySelector(".carousel-track");
+        const slides = Array.from(phoneCarousel.querySelectorAll(".carousel-slide"));
+        const dots = Array.from(phoneCarousel.querySelectorAll(".pagination-dot"));
+        const prevButton = phoneCarousel.querySelector(".carousel-arrow.prev");
+        const nextButton = phoneCarousel.querySelector(".carousel-arrow.next");
+
+        let currentIndex = 0;
+
+        const updateCarousel = (index) => {
+          currentIndex = (index + slides.length) % slides.length;
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+          slides.forEach((slide, slideIndex) => {
+            slide.classList.toggle("is-active", slideIndex === currentIndex);
+          });
+          dots.forEach((dot, dotIndex) => {
+            const isActive = dotIndex === currentIndex;
+            dot.classList.toggle("is-active", isActive);
+            dot.setAttribute("aria-pressed", isActive ? "true" : "false");
+          });
+        };
+
+        prevButton?.addEventListener("click", () => updateCarousel(currentIndex - 1));
+        nextButton?.addEventListener("click", () => updateCarousel(currentIndex + 1));
+        dots.forEach((dot, dotIndex) => {
+          dot.addEventListener("click", () => updateCarousel(dotIndex));
+        });
+      }
+    </script>
   </body>
 </html>
